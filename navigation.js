@@ -17,4 +17,56 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
 
+const scrollRevealOptions = {
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
+};
+
+// headerin efekti burada
+ScrollReveal().reveal(".header__content h1", {
+  ...scrollRevealOptions,
+});
+
+ScrollReveal().reveal(".header__btn", {
+  ...scrollRevealOptions,
+  delay: 500,
+});
+
+// aracimiz kisminin efekti
+ScrollReveal().reveal(".experience__image", {
+  ...scrollRevealOptions,
+});
+
+ScrollReveal().reveal(".experience__container", {
+  ...scrollRevealOptions,
+});
+
+ScrollReveal().reveal(".experience__image2", {
+  ...scrollRevealOptions,
+});
+
+// hakkında kısmındaki servis kartının efekti burada
+ScrollReveal().reveal(".service__card", {
+  ...scrollRevealOptions,
+  interval: 500,
+});
+
+// ortaklarimiz kismi efekti
+ScrollReveal().reveal(".testimonial__container", {
+  ...scrollRevealOptions,
+});
+
+// contact yani iletisim kismindaki efekt
+ScrollReveal().reveal(".contact__container", {
+  ...scrollRevealOptions,
+});
+
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
 
