@@ -18,6 +18,7 @@ body {
   user-select: none;          
 }
 
+
 * {
   padding: 0;
   margin: 0;
@@ -221,14 +222,22 @@ nav {
 
 .service__grid {
   margin-top: 4rem;
-  display: grid;
-  gap: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Kartlar sıralanırken alt satıra geçmelerini sağlar */
+  justify-content: center; /* Kartları yatayda ortala */
+}
+
+.service__card {
+  max-width: 300px;
+  margin: 0 1rem 2rem; /* Kenar boşlukları ayarlayabilirsiniz */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .service__card img {
   max-width: 150px;
-  margin-inline: auto;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
   border-radius: 100%;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
